@@ -15,6 +15,12 @@ export class AppComponent {
     this.cookiesService.set('token', 'name');
   }
   deleteCookie() {
+    // this does not work
+    this.cookiesService.deleteAll('token');
+  }
+
+  deleteAllCookie() {
+    // This works
     this.cookiesService.deleteAll();
   }
 }
